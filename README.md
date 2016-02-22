@@ -7,7 +7,7 @@ MVPのios実装のテストです
 ### MVPの実装にあたって
 以下のように実装しています
 
-- *View, *ViewControllerはView層、*PresenterはPresentation層, その他はModel層とする
+- `*View`, `*ViewController`はView層、`*Presenter`はPresentation層, その他はModel層とする
 - ViewはUIKitのコンポーネントのようにAPIを通じて渡されたデータを表示する
 - ViewはModelを扱わない
 - PresenterはModelの値をViewのAPIを通じて表示する

@@ -9,13 +9,14 @@
 #import "AMNImageViewController.h"
 
 @interface AMNImageViewController ()
-@property (nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic, weak) IBOutlet UIImageView *imageView;
 @end
 
 @implementation AMNImageViewController
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     self.presenter = [AMNPhotoPresenter new];
     self.presenter.view = self;
     self.presenter.viewController = self;

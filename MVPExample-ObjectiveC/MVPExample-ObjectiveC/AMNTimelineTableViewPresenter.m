@@ -29,6 +29,17 @@
     return self;
 }
 
+- (instancetype)initWithView:(UITableView *)view
+{
+    if (self = [self init]) {
+        self.view = view;
+        self.view.delegate = self;
+        self.view.dataSource = self;
+    }
+    
+    return self;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;

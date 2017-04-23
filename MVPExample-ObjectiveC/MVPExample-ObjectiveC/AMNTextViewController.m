@@ -16,10 +16,10 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     self.presenter = [AMNTextPresenter new];
     self.presenter.view = self;
     self.presenter.viewController = self;
-
 }
 
 - (void)viewWillAppear:(BOOL)animated

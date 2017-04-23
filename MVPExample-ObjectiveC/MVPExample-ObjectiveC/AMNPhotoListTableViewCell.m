@@ -10,7 +10,7 @@
 
 @interface AMNPhotoListTableViewCell()
 
-@property (nonatomic) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -18,6 +18,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     self.presenter = [[AMNPhotoListCollectionViewPresenter alloc] initWithView:self.collectionView];
 }
 

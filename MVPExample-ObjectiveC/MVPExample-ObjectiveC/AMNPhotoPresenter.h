@@ -20,7 +20,7 @@
 
 @property (nonatomic, weak) NSObject<AMNPhotoProtocol> *view;
 @property (nonatomic) AMNPhoto *photo;
-@property (nonatomic) UIViewController *viewController;
+@property (nonatomic, weak) UIViewController *viewController;
 
 - (instancetype)initWithView:(UIView<AMNPhotoProtocol> *)view;
 - (void)presentWithModel:(AMNPhoto *)model viewController:(UIViewController *)viewController;

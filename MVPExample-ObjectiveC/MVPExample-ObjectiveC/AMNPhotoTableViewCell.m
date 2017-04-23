@@ -9,7 +9,7 @@
 #import "AMNPhotoTableViewCell.h"
 @interface AMNPhotoTableViewCell()
 
-@property (nonatomic) IBOutlet UIImageView *photoImageView;
+@property (nonatomic, weak) IBOutlet UIImageView *photoImageView;
 
 @end
 
@@ -17,6 +17,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     self.presenter = [[AMNPhotoPresenter alloc] initWithView:self];
 }
 

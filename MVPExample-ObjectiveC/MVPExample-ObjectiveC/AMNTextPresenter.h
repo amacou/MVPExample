@@ -18,8 +18,8 @@
 
 @interface AMNTextPresenter : NSObject <AMNPresenterProtocol>
 
-@property (nonatomic) NSObject<AMNTextPresenterProtocol> *view;
-@property (nonatomic) UIViewController *viewController;
+@property (nonatomic, weak) NSObject<AMNTextPresenterProtocol> *view;
+@property (nonatomic, weak) UIViewController *viewController;
 @property (nonatomic) AMNText *text;
 
 - (instancetype)initWithView:(UIView<AMNTextPresenterProtocol> *)view;

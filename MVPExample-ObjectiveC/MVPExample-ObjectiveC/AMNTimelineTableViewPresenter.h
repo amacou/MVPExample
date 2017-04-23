@@ -12,4 +12,6 @@
 @interface AMNTimelineTableViewPresenter : NSObject <UITableViewDataSource, UITableViewDelegate, AMNPresenterProtocol>
 @property (nonatomic, weak) IBOutlet UITableView *view;
 @property (nonatomic, weak) IBOutlet UIViewController *viewController;
+
+- (instancetype)initWithView:(UITableView *)view;
 @end

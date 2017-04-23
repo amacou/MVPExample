@@ -10,7 +10,7 @@
 
 @interface AMNTextTableViewCell()
 
-@property (nonatomic) IBOutlet UILabel *label;
+@property (nonatomic, weak) IBOutlet UILabel *label;
 
 @end
 
@@ -18,6 +18,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     self.presenter = [[AMNTextPresenter alloc] initWithView:self];
 }
 

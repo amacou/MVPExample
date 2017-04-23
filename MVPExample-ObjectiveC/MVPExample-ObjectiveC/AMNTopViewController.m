@@ -9,10 +9,17 @@
 #import "AMNTopViewController.h"
 
 @interface AMNTopViewController ()
-
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 @end
 
 @implementation AMNTopViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.presenter = [[AMNTimelineTableViewPresenter alloc] initWithView: self.tableView];
+    self.presenter.viewController = self;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

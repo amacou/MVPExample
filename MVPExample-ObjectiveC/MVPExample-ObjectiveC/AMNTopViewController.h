@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AMNTimelineTableViewPresenter.h"
 @interface AMNTopViewController : UIViewController
-
-
+@property (nonatomic) AMNTimelineTableViewPresenter *presenter;
 @end
 
